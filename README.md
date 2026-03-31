@@ -38,7 +38,7 @@ Java Development Kit (JDK) version 21 or above
 
 1. Clone the repository
 
-git clone https://github.com/Kavya-Kulshreshtha/Vityarthi-Programming-in-Java
+git clone https://github.com/SAMQ-debug/Vityarthi-Programming-in-Java/edit/main/README.md
 
 2. Import into Eclipse
 
