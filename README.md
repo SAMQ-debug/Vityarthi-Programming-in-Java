@@ -1,138 +1,144 @@
 
-# 🎓 Campus Course & Records Manager (CCRM)
+Table of Contents
 
-A robust console-based application for managing academic records, built with modern Java SE.
+About the Project
 
-![Java](https://img.shields.io/badge/Java-21-blue?logo=openjdk)
-![Status](https://img.shields.io/badge/Status-Completed-green)
-![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)
+Setup Guide
 
----
+ Highlights
 
-## 📋 Table of Contents
+ Concepts in Action
 
-- [About The Project](#about-the-project)
-- [🚀 Getting Started](#-getting-started)
-- [✨ Key Features](#-key-features)
-- [🧠 Core Concepts Implemented](#-core-concepts-implemented)
-- [✍️ Author](#️-author)
-- [Acknowledgements](#acknowledgements)
+ Author
 
----
+Credits
 
-## About The Project
 
-**Campus Course & Records Manager (CCRM)** is a comprehensive, console-based application designed for academic administration. It provides a full suite of tools for managing student records, course catalogs, enrollments, and grades through a simple command-line interface (CLI).
 
-This project showcases the power of core Java principles and modern APIs, including:
 
-- **Object-Oriented Programming (OOP)**
-- **NIO.2** for efficient file I/O
-- The **Streams API** for powerful data manipulation
-- The **Date/Time API**
-- Key design patterns like **Singleton** and **Builder**
+About the Project
 
----
+The Campus Course & Records Manager (CCRM) is a command-line based system created to simplify academic management tasks.
 
-## 🚀 Getting Started
+It allows users to efficiently handle student data, course listings, enrollments, and grading, all through a streamlined CLI interface. The goal of this project is not just to build a working system, but to demonstrate how core Java concepts and modern APIs can be applied to solve real-world problems.
 
-Follow these steps to get a local copy up and running.
+From structured object-oriented design to efficient file handling and data processing, CCRM reflects practical Java development in action.
 
-### Prerequisites
 
-- **Java Development Kit (JDK) version 21 or newer.**
 
-### Installation & Execution
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/Kavya-Kulshreshtha/Vityarthi-Programming-in-Java
-    ```
+Setup Guide
 
-2.  **Import into Eclipse IDE:**
-    - Navigate to `File` > `Import` > `General` > `Existing Projects into Workspace`.
-    - Select the cloned repository directory.
+ Requirements
 
-3.  **Compile the Project:**
-    - Open a terminal or command prompt in the project's root directory and run:
-    ```bash
-    javac -d bin src/edu/ccrm/cli/Main.java
-    ```
+Java Development Kit (JDK) version 21 or above
 
-4.  **Execute the Application:**
-    - Run the following command. The `-ea` flag is important as it **enables assertions** used for internal validation.
-    ```bash
-    java -ea -cp bin edu.ccrm.cli.Main
-    ```
 
-> **Note:** Sample data files are available in `test-data/students.csv` and `test-data/courses.csv` to get you started.
+ Steps to Run
 
----
+1. Clone the repository
 
-## ✨ Key Features
+git clone https://github.com/Kavya-Kulshreshtha/Vityarthi-Programming-in-Java
 
-- 🧑‍🎓 **Student & Course Management**: Add, update, and remove student and course records seamlessly.
-- 📝 **Enrollment Processing**: Handle student enrollments while enforcing credit limits (max 18 per semester).
-- 📊 **Grade Tracking**: Assign and manage grades for students in their enrolled courses.
-- 🗂️ **Data Operations**: Easily import/export data from/to CSV files and perform data backups.
-- ⚙️ **Advanced Utilities**: Features an intuitive CLI, powerful search capabilities using Streams, and a utility for recursively calculating directory sizes.
+2. Import into Eclipse
 
----
+Navigate to File > Import > General > Existing Projects into Workspace
 
-## 🧠 Core Concepts Implemented
+Select the project folder you just cloned
 
-This project serves as a practical demonstration of several fundamental Java and software engineering concepts.
 
-### Java Platform Editions: ME, SE, and EE
+3. Compile the source code
 
-| Platform               | Description                                                        | Use Case                               | Relevance to CCRM                                        |
-| ---------------------- | ------------------------------------------------------------------ | -------------------------------------- | -------------------------------------------------------- |
-| **Java ME** (Micro)    | A lightweight version for resource-constrained devices.            | Older mobile phones, IoT devices.      | Not used, as it lacks features for a desktop application. |
-| **Java SE** (Standard) | The core Java platform for general-purpose applications.           | Desktop software, command-line tools.  | **This is the primary platform used for CCRM.**          |
-| **Java EE** (Enterprise) | Extends Java SE with APIs for large-scale enterprise servers.      | Web applications, web services.        | Not used, as CCRM is a standalone application.           |
+javac -d bin src/edu/ccrm/cli/Main.java
 
-<br/>
+4. Run the application
 
-### JDK vs. JRE vs. JVM
+java -ea -cp bin edu.ccrm.cli.Main
 
-- **JDK (Java Development Kit)**: The complete toolkit for Java developers. It includes the JRE, compiler (`javac`), debugger, and other tools. **You need this to compile and run CCRM.**
-- **JRE (Java Runtime Environment)**: The environment required to *run* Java applications. It contains the JVM and core libraries but lacks development tools.
-- **JVM (Java Virtual Machine)**: An abstract machine that runs compiled Java bytecode, enabling the "write once, run anywhere" philosophy.
+ Tip: You can use the sample CSV files in the test-data folder to quickly test features.
 
-<br/>
 
-### Syllabus Topic Mapping
 
-This table highlights where key OOP and Java concepts are implemented within the project's source code.
+Highlights
 
-| Topic              | Implementation Location                |
-| ------------------ | -------------------------------------- |
-| Encapsulation      | `edu.ccrm.domain.Person` (private fields) |
-| Inheritance        | `edu.ccrm.domain.Student` (extends Person) |
-| Abstraction        | `edu.ccrm.domain.Person` (abstract class) |
-| Polymorphism       | `edu.ccrm.service.TranscriptService`   |
-| Streams API        | `edu.ccrm.service.CourseService`       |
-| NIO.2 API          | `edu.ccrm.io.ImportExportService`      |
-| Design Patterns    | `edu.ccrm.config.AppConfig` (Singleton) |
-| Exception Handling | `edu.ccrm.service.EnrollmentService`   |
+Manage Students & Courses
+Create, modify, and delete records with ease.
 
----
+Enrollment Handling
+Enroll students into courses while automatically checking constraints like maximum credit limits.
 
-## ✍️ Author
+Grade Management System
+Assign and update grades for enrolled students.
 
-**Kavya Kulshreshtha**
+Data Import & Export
+Work with CSV files and maintain backups effortlessly.
 
-- GitHub: [@Kavya-Kulshreshtha](https://github.com/Kavya-Kulshreshtha)
+Additional Functionalities
 
----
+Fast data filtering using Streams
 
-## Acknowledgements
+Clean and interactive CLI design
 
-- [Java SE Documentation](https://docs.oracle.com/en/java/javase/21/)
-- [Eclipse IDE](https://www.eclipse.org/)
-- [GitHub](https://github.com/)
+Directory size calculation utility
 
---- 
 
-*Built with dedication as a part of the Vityarthi Programming in Java course.*
-```
+
+Concepts in Action
+
+This project acts as a hands-on implementation of important Java and software engineering concepts.
+
+
+
+Java Platform Overview
+
+Platform	Description	Typical Usage	Role in CCRM
+
+Java ME	Lightweight Java version	Embedded systems, IoT	Not used
+Java SE	Standard Java platform	Desktop & CLI applications	Core platform used
+Java EE	Enterprise-level extensions	Web apps and services	Not required
+
+
+
+ Understanding JDK, JRE, JVM
+
+JDK → Complete development package including compiler and tools
+
+JRE → Environment required to execute Java programs
+
+JVM → Executes bytecode and ensures platform independence
+
+
+These components together make Java portable across different systems.
+
+
+
+ Concept Mapping in Code
+
+Concept	Implementation Area
+
+Encapsulation	Person class (private members)
+Inheritance	Student class extending Person
+Abstraction	Abstract base class Person
+Polymorphism	TranscriptService
+Streams API	CourseService
+NIO.2 File Handling	ImportExportService
+Design Pattern	AppConfig (Singleton pattern)
+Exception Handling	EnrollmentService
+
+
+ Author
+
+Samaira Quadry
+
+GitHub: @SAMQ-debug
+
+
+ Credits
+
+Java SE Documentation
+
+Eclipse IDE
+
+GitHub
+
+ Developed as part of the Vityarthi Programming in Java course, combining learning with practical implementation.
