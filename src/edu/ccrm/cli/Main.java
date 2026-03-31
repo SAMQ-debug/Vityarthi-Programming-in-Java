@@ -1,17 +1,20 @@
-package edu.ccrm.cli;
+package edu.ccrm.config;
 
-import edu.ccrm.config.AppConfig;
-import java.util.Scanner;
+import edu.ccrm.domain.*;
+import java.util.*;
 
-public class Main {
-    public static void main(String[] args) {
-        // Load default config
-        AppConfig.getInstance().loadDefaults();
+public class DataStore {
+    private static final DataStore INSTANCE = new DataStore();
 
-        // Create scanner for user input
-        try (Scanner sc = new Scanner(System.in)) {
-            ConsoleMenu menu = new ConsoleMenu(sc);
-            menu.runLoop();  // Start CLI loop
-        }
-    }
+    private final Map<String, Student> students = new LinkedHashMap<>();
+    private final Map<String, Course> courses = new LinkedHashMap<>();
+    private final List<Enrollment> enrollments = new ArrayList<>();
+
+    private DataStore() {}
+
+    public static DataStore getInstance() { return INSTANCE; }
+
+    public Map<String, Student> students() { return students; }
+    public Map<String, Course> courses() { return courses; }
+    public List<Enrollment> enrollments() { return enrollments; }
 }
